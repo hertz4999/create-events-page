@@ -144,7 +144,6 @@ const useStyles = makeStyles((theme) => ({
   selectField: {
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(3),
-
     // minWidth: "50ch",
   },
   priceTextField: {
@@ -221,6 +220,11 @@ export default function Dashboard() {
         <Container maxWidth="lg" className={classes.container}>
           <Grid container>
             {/* Chart */}
+            <Grid item xs={12} md={10} lg={10}>
+              <Typography variant="h4" gutterBottom>
+                Create Event
+              </Typography>
+            </Grid>
             <Grid item xs={12} md={10} lg={10}>
               <Paper className={classes.formPaper}>
                 {/* <Grid container spacing={2}>
