@@ -134,21 +134,23 @@ const useStyles = makeStyles((theme) => ({
   },
   textField: {
     marginRight: theme.spacing(25),
+    marginLeft: theme.spacing(1),
   },
   calendarField: {
+    // width: "50ch",
     marginLeft: theme.spacing(1),
-    width: "50ch",
     marginTop: theme.spacing(3),
   },
   selectField: {
-    marginTop: theme.spacing(3),
     marginLeft: theme.spacing(1),
-    minWidth: "50ch",
+    marginTop: theme.spacing(3),
+
+    // minWidth: "50ch",
   },
   priceTextField: {
     marginLeft: theme.spacing(1),
     marginBottom: theme.spacing(3),
-    minWidth: "50ch",
+    // minWidth: "50ch",
   },
 }));
 
@@ -242,67 +244,74 @@ export default function Dashboard() {
                   />
                 </FormControl>
                 <Grid container justify="flex-start">
-                  <TextField
-                    id="datetime-local"
-                    label="Start Date"
-                    type="datetime-local"
-                    defaultValue="2017-05-24T10:30"
-                    className={clsx(
-                      classes.textField,
-                      open && classes.calendarField
-                    )}
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                  />
-                  <TextField
-                    id="datetime-local"
-                    label="End Date"
-                    type="datetime-local"
-                    defaultValue="2017-05-24T10:30"
-                    className={classes.calendarField}
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                  />
+                  <Grid item xs={12} md={5} lg={5}>
+                    <FormControl fullWidth>
+                      <TextField
+                        id="datetime-local"
+                        label="Start Date"
+                        type="datetime-local"
+                        defaultValue="2017-05-24T10:30"
+                        className={classes.calendarField}
+                        InputLabelProps={{
+                          shrink: true,
+                        }}
+                      />
+                    </FormControl>
+                  </Grid>
+                  <Grid item xs={0} md={2} lg={2}></Grid>
+                  <Grid item xs={12} md={5} lg={5}>
+                    <FormControl fullWidth>
+                      <TextField
+                        id="datetime-local"
+                        label="End Date"
+                        type="datetime-local"
+                        defaultValue="2017-05-24T10:30"
+                        className={classes.calendarField}
+                        InputLabelProps={{
+                          shrink: true,
+                        }}
+                      />
+                    </FormControl>
+                  </Grid>
                 </Grid>
-                <FormControl
-                  className={clsx(
-                    classes.textField,
-                    open && classes.selectField
-                  )}
-                >
-                  <InputLabel id="demo-simple-select-label">
-                    Timezone
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value=""
-                    // onChange={handleChange}
-                  >
-                    <MenuItem value={10}>India</MenuItem>
-                    <MenuItem value={20}>USA</MenuItem>
-                    <MenuItem value={30}>Canada</MenuItem>
-                  </Select>
-                </FormControl>
-                <FormControl className={classes.selectField}>
-                  <InputLabel id="demo-simple-select-label">
-                    Recurrence
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value=""
+                <Grid container justify="flex-start">
+                  <Grid item xs={12} md={5} lg={5}>
+                    <FormControl className={classes.selectField} fullWidth>
+                      <InputLabel id="demo-simple-select-label">
+                        Timezone
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value=""
+                        // onChange={handleChange}
+                      >
+                        <MenuItem value={10}>India</MenuItem>
+                        <MenuItem value={20}>USA</MenuItem>
+                        <MenuItem value={30}>Canada</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                  <Grid item xs={0} md={2} lg={2}></Grid>
+                  <Grid item xs={12} md={5} lg={5}>
+                    <FormControl className={classes.selectField} fullWidth>
+                      <InputLabel id="demo-simple-select-label">
+                        Recurrence
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value=""
 
-                    // onChange={handleChange}
-                  >
-                    <MenuItem value={10}>Never Repeat</MenuItem>
-                    <MenuItem value={20}>Weekly</MenuItem>
-                    <MenuItem value={30}>Daily</MenuItem>
-                  </Select>
-                </FormControl>
-                <br />
+                        // onChange={handleChange}
+                      >
+                        <MenuItem value={10}>Never Repeat</MenuItem>
+                        <MenuItem value={20}>Weekly</MenuItem>
+                        <MenuItem value={30}>Daily</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                </Grid>
                 <br />
                 <FormControl className={classes.formMargin}>
                   <FormControlLabel
@@ -317,19 +326,24 @@ export default function Dashboard() {
                   />
                 </FormControl>
                 <br />
-                <FormControl className={classes.priceTextField}>
-                  <InputLabel htmlFor="standard-adornment-amount">
-                    Amount
-                  </InputLabel>
-                  <Input
-                    id="standard-adornment-amount"
-                    // value={values.amount}
-                    // onChange={handleChange('amount')}
-                    startAdornment={
-                      <InputAdornment position="start">INR</InputAdornment>
-                    }
-                  />
-                </FormControl>
+                <Grid container justify="flex-start">
+                  <Grid item xs={12} md={5} lg={5}>
+                    <FormControl className={classes.priceTextField} fullWidth>
+                      <InputLabel htmlFor="standard-adornment-amount">
+                        Amount
+                      </InputLabel>
+                      <Input
+                        id="standard-adornment-amount"
+                        // value={values.amount}
+                        // onChange={handleChange('amount')}
+                        startAdornment={
+                          <InputAdornment position="start">INR</InputAdornment>
+                        }
+                      />
+                    </FormControl>
+                  </Grid>
+                  <Grid item xs={0} md={7} lg={7}></Grid>
+                </Grid>
                 {/* </Grid>
                   <Grid item xs={12} md={12} lg={12}></Grid>
                   <Grid item xs={12} md={12} lg={12}></Grid> */}
