@@ -30,7 +30,7 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="My Events" />
     </ListItem>
-    <ListItem component={Link} to="/create-event" selected={1} button>
+    <ListItem component={Link} to="/create-event" selected={0} button>
       <ListItemIcon>
         <QueueIcon />
       </ListItemIcon>
