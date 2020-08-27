@@ -1,10 +1,13 @@
 import React from "react";
-import Dashboard from "./pages/create-events";
+import Dashboard from "./pages/Home";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      <BrowserRouter>
+        <Dashboard />
+      </BrowserRouter>
     </div>
   );
 }
