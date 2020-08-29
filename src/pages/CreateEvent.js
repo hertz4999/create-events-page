@@ -25,12 +25,9 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
 
-  textField: {
-    marginRight: theme.spacing(25),
-    marginLeft: theme.spacing(1),
-  },
   calendarField: {
     // width: "50ch",
+
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(3),
   },

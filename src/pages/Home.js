@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
+//import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 // import Box from "@material-ui/core/Box";
 
 import Container from "@material-ui/core/Container";
@@ -21,6 +22,7 @@ import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
 import { mainListItems } from "../Components/listItems";
 import CreateEvent from "./CreateEvent";
 import MyEvents from "./MyEvents";
+import MySite from "./MySite";
 import ManagePayments from "./ManagePayments";
 import Members from "./Members";
 
@@ -120,6 +122,7 @@ export default function Dashboard() {
   return (
     <div className={classes.root}>
       <CssBaseline />
+
       <AppBar
         position="absolute"
         className={clsx(classes.appBar, open && classes.appBarShift)}
@@ -151,6 +154,7 @@ export default function Dashboard() {
           </IconButton>
         </Toolbar>
       </AppBar>
+
       <Drawer
         variant="permanent"
         classes={{
@@ -168,6 +172,7 @@ export default function Dashboard() {
         {/* <Divider />
         <List>{secondaryListItems}</List> */}
       </Drawer>
+
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
@@ -175,6 +180,7 @@ export default function Dashboard() {
             <Route exact path="/" component={MyEvents} />
             <Route path="/manage-payments" component={ManagePayments} />
             <Route path="/create-event" component={CreateEvent} />
+            <Route path="/my-site" component={MySite} />
             <Route path="/members" component={Members} />
             <Redirect to="/" />
           </Switch>
