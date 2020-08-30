@@ -2,6 +2,7 @@ import React from "react";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+import FormControl from "@material-ui/core/FormControl";
 
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -30,8 +31,8 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(name, property_1, property_2, property_3, property_4) {
-  return { name, property_1, property_2, property_3, property_4 };
+function createData(name, property_1, property_2) {
+  return { name, property_1, property_2 };
 }
 
 const rows = [
@@ -44,12 +45,12 @@ const rows = [
 
 const useStyles = makeStyles((theme) => ({
   table: {
-    minWidth: 300,
+    minWidth: 100,
   },
   rightButton: {
     // marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
-    // marginRight: theme.spacing(1),
+    marginRight: theme.spacing(1),
   },
 }));
 
@@ -68,47 +69,34 @@ export default function Members() {
         <Grid container>
           <Grid justify="flex-end" container>
             {/* <Grid item xs={12} md={12} lg={12}> */}
-            <Grid item xs={12} md={2} lg={2}>
-              <Button
-                variant="contained"
-                size="small"
-                color="primary"
-                className={classes.rightButton}
-              >
-                Add members
-              </Button>
+            <Grid item xs={12} md={2} lg={2} className={classes.rightButton}>
+              <FormControl fullWidth>
+                <Button variant="contained" size="small" color="primary">
+                  Add members
+                </Button>
+              </FormControl>
             </Grid>
-            <Grid item xs={12} md={2} lg={2}>
-              <Button
-                variant="contained"
-                size="small"
-                color="primary"
-                className={classes.rightButton}
-              >
-                Edit members
-              </Button>
+            <Grid item xs={12} md={2} lg={2} className={classes.rightButton}>
+              <FormControl fullWidth>
+                <Button variant="contained" size="small" color="primary">
+                  Edit members
+                </Button>
+              </FormControl>
             </Grid>
-            <Grid item xs={12} md={2} lg={2}>
-              <Button
-                variant="contained"
-                size="small"
-                color="primary"
-                className={classes.rightButton}
-              >
-                Enroll
-              </Button>
+            <Grid item xs={12} md={2} lg={2} className={classes.rightButton}>
+              <FormControl fullWidth>
+                <Button variant="contained" size="small" color="primary">
+                  Enroll
+                </Button>
+              </FormControl>
             </Grid>
-            <Grid item xs={12} md={2} lg={2}>
-              <Button
-                variant="contained"
-                size="small"
-                color="primary"
-                className={classes.rightButton}
-              >
-                Unenroll
-              </Button>
+            <Grid item xs={12} md={2} lg={2} className={classes.rightButton}>
+              <FormControl fullWidth>
+                <Button variant="contained" size="small" color="primary">
+                  Unenroll
+                </Button>
+              </FormControl>
             </Grid>
-            {/* </Grid> */}
           </Grid>
         </Grid>
       </Grid>
@@ -125,17 +113,15 @@ export default function Members() {
           <TableBody>
             {rows.map((row) => (
               <StyledTableRow key={row.name}>
-                <StyledTableCell component="th" scope="row">
-                  {row.name}
-                </StyledTableCell>
+                <StyledTableCell align="right">{row.name}</StyledTableCell>
                 {/* <StyledTableCell align="right">
                   {row.property_1}
                 </StyledTableCell> */}
                 <StyledTableCell align="right">
-                  {row.property_2}
+                  {row.property_1}
                 </StyledTableCell>
                 <StyledTableCell align="right">
-                  {row.property_3}
+                  {row.property_2}
                 </StyledTableCell>
               </StyledTableRow>
             ))}
