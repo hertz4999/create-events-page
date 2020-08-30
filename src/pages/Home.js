@@ -25,6 +25,7 @@ import MyEvents from "./MyEvents";
 import MySite from "./MySite";
 import ManagePayments from "./ManagePayments";
 import Members from "./Members";
+import GetStarted from "./GetStarted";
 
 const drawerWidth = 240;
 
@@ -182,6 +183,7 @@ export default function Dashboard() {
             <Route path="/create-event" component={CreateEvent} />
             <Route path="/my-site" component={MySite} />
             <Route path="/members" component={Members} />
+            <Route path="/get-started" component={GetStarted} />
             <Redirect to="/" />
           </Switch>
         </Container>

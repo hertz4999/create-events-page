@@ -12,7 +12,7 @@ import PaymentIcon from "@material-ui/icons/Payment";
 
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <ListItem component={Link} to="/get-started" button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
