@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 100,
   },
   rightButton: {
-    // marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
     marginRight: theme.spacing(1),
   },
@@ -104,7 +103,6 @@ export default function Members() {
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
             <TableRow>
-              {/* <StyledTableCell align="right">Property_1</StyledTableCell> */}
               <StyledTableCell align="right">Member Name</StyledTableCell>
               <StyledTableCell align="right">Email</StyledTableCell>
               <StyledTableCell align="right">Event</StyledTableCell>
@@ -114,9 +112,6 @@ export default function Members() {
             {rows.map((row) => (
               <StyledTableRow key={row.name}>
                 <StyledTableCell align="right">{row.name}</StyledTableCell>
-                {/* <StyledTableCell align="right">
-                  {row.property_1}
-                </StyledTableCell> */}
                 <StyledTableCell align="right">
                   {row.property_1}
                 </StyledTableCell>

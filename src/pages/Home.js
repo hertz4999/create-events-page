@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
 //import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-// import Box from "@material-ui/core/Box";
 
 import Container from "@material-ui/core/Container";
 import AppBar from "@material-ui/core/AppBar";
@@ -170,8 +169,6 @@ export default function Dashboard() {
         </div>
         <Divider />
         <List>{mainListItems}</List>
-        {/* <Divider />
-        <List>{secondaryListItems}</List> */}
       </Drawer>
 
       <main className={classes.content}>

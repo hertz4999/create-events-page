@@ -25,7 +25,6 @@ export default function ManagePayments() {
   const classes = useStyles();
   return (
     <Grid container>
-      {/* Chart */}
       <Grid item xs={12} md={10} lg={10}>
         <Typography variant="h4" gutterBottom>
           Payment Methods

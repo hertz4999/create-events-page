@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-//import CssBaseline from "@material-ui/core/CssBaseline";
 import FormControl from "@material-ui/core/FormControl";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -26,20 +25,16 @@ const useStyles = makeStyles((theme) => ({
   },
 
   calendarField: {
-    // width: "50ch",
-
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(3),
   },
   selectField: {
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(3),
-    // minWidth: "50ch",
   },
   priceTextField: {
     marginLeft: theme.spacing(1),
     marginBottom: theme.spacing(3),
-    // minWidth: "50ch",
   },
 }));
 export default function CreateEvent() {
@@ -47,7 +42,6 @@ export default function CreateEvent() {
   return (
     <Grid container>
       <Grid container>
-        {/* Chart */}
         <Grid item xs={12} md={10} lg={10}>
           <Typography variant="h4" gutterBottom>
             Create Event
@@ -55,16 +49,8 @@ export default function CreateEvent() {
         </Grid>
         <Grid item xs={12} md={10} lg={10}>
           <Paper className={classes.formPaper}>
-            {/* <Grid container spacing={2}>
-            <Grid item xs={12} md={12} lg={12}> */}
             <FormControl fullWidth className={classes.formMargin}>
-              <TextField
-                id="outlined-basic"
-                label="Event Name"
-                // variant="outlined"
-              />
-              {/* </Grid>
-            <Grid item xs={12} md={12} lg={12}> */}
+              <TextField id="outlined-basic" label="Event Name" />
             </FormControl>
             <FormControl fullWidth className={classes.formMargin}>
               <TextField
@@ -72,7 +58,6 @@ export default function CreateEvent() {
                 multiline
                 rows={4}
                 label="Event Description"
-                // variant="outlined"
               />
             </FormControl>
             <Grid container justify="flex-start">
@@ -116,7 +101,6 @@ export default function CreateEvent() {
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value=""
-                    // onChange={handleChange}
                   >
                     <MenuItem value={10}>India</MenuItem>
                     <MenuItem value={20}>USA</MenuItem>
@@ -134,8 +118,6 @@ export default function CreateEvent() {
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value=""
-
-                    // onChange={handleChange}
                   >
                     <MenuItem value={10}>Never Repeat</MenuItem>
                     <MenuItem value={20}>Weekly</MenuItem>
@@ -147,13 +129,7 @@ export default function CreateEvent() {
             <br />
             <FormControl className={classes.formMargin}>
               <FormControlLabel
-                control={
-                  <Checkbox
-                    // checked={true}
-                    name="checkedA"
-                    color="primary"
-                  />
-                }
+                control={<Checkbox name="checkedA" color="primary" />}
                 label="This is a free event"
               />
             </FormControl>
@@ -166,8 +142,6 @@ export default function CreateEvent() {
                   </InputLabel>
                   <Input
                     id="standard-adornment-amount"
-                    // value={values.amount}
-                    // onChange={handleChange('amount')}
                     startAdornment={
                       <InputAdornment position="start">INR</InputAdornment>
                     }
@@ -176,10 +150,6 @@ export default function CreateEvent() {
               </Grid>
               <Grid item xs={0} md={7} lg={7}></Grid>
             </Grid>
-            {/* </Grid>
-            <Grid item xs={12} md={12} lg={12}></Grid>
-            <Grid item xs={12} md={12} lg={12}></Grid> */}
-            {/* </Grid> */}
           </Paper>
         </Grid>
       </Grid>
@@ -191,10 +161,7 @@ export default function CreateEvent() {
                 id="outlined-basic"
                 label="Video Conference Link"
                 variant="outlined"
-                // variant="outlined"
               />
-              {/* </Grid>
-            <Grid item xs={12} md={12} lg={12}> */}
             </FormControl>
           </Paper>
         </Grid>

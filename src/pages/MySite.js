@@ -1,21 +1,11 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-// import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-//import CssBaseline from "@material-ui/core/CssBaseline";
 import FormControl from "@material-ui/core/FormControl";
-// import FormControlLabel from "@material-ui/core/FormControlLabel";
-// import Checkbox from "@material-ui/core/Checkbox";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-// import Input from "@material-ui/core/Input";
-// import InputLabel from "@material-ui/core/InputLabel";
-// import InputAdornment from "@material-ui/core/InputAdornment";
-// import MenuItem from "@material-ui/core/MenuItem";
-// import Select from "@material-ui/core/Select";
-
 import FilledInput from "@material-ui/core/FilledInput";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -27,17 +17,12 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import PublicIcon from "@material-ui/icons/Public";
 
-// import CalendarImg from "../images/Calendar.jpg";
-// import backGroundImg from "../images/background.jpg";
-
 const useStyles = makeStyles((theme) => ({
   formPaper: {
     padding: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
   coverImgPaper: {
-    // flexDirection: "column",
-    // justifyContent: "flex-end",
     height: 400,
     padding: theme.spacing(2),
     margin: theme.spacing(1),
@@ -55,8 +40,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
 
-  calendarField: {
-    // width: "50ch",
+  locField: {
     marginLeft: theme.spacing(1),
     marginBottom: theme.spacing(1),
     marginTop: theme.spacing(3),
@@ -67,7 +51,6 @@ export default function MySite() {
   return (
     <Grid container>
       <Grid container>
-        {/* Chart */}
         <Grid item xs={12} md={10} lg={10}>
           <Typography variant="h4" gutterBottom>
             My Site
@@ -94,31 +77,12 @@ export default function MySite() {
                 labelWidth={60}
               />
             </FormControl>
-            {/* <Paper
-              variant="outlined"
-              className={classes.coverImgPaper}
-              style={{ backgroundImage: `url(${backGroundImg})` }}
-            >
-              <Grid container className={classes.coverImgGrid}>
-                {" "}
-                <Avatar alt="Profile Pic" src={CalendarImg} />
-              </Grid>{" "}
-            </Paper>
-            */}
           </Paper>
         </Grid>
         <Grid item xs={12} md={10} lg={10}>
           <Paper className={classes.formPaper}>
-            {/* <Grid container spacing={2}>
-            <Grid item xs={12} md={12} lg={12}> */}
             <FormControl fullWidth className={classes.formMargin}>
-              <TextField
-                id="outlined-basic"
-                label="Name Placeholder"
-                // variant="outlined"
-              />
-              {/* </Grid>
-            <Grid item xs={12} md={12} lg={12}> */}
+              <TextField id="outlined-basic" label="Name Placeholder" />
             </FormControl>
             <FormControl fullWidth className={classes.formMargin}>
               <TextField
@@ -126,7 +90,6 @@ export default function MySite() {
                 multiline
                 rows={4}
                 label="Lorem Ipsum"
-                // variant="outlined"
               />
             </FormControl>
             <Grid container justify="space-between">
@@ -136,7 +99,7 @@ export default function MySite() {
                     id="city"
                     label="City"
                     defaultValue="Pune"
-                    className={classes.calendarField}
+                    className={classes.locField}
                   />
                 </FormControl>
               </Grid>
@@ -146,7 +109,7 @@ export default function MySite() {
                     id="state"
                     label="State"
                     defaultValue="Maha"
-                    className={classes.calendarField}
+                    className={classes.locField}
                   />
                 </FormControl>
               </Grid>
@@ -156,7 +119,7 @@ export default function MySite() {
                     id="country"
                     label="Country"
                     defaultValue="India"
-                    className={classes.calendarField}
+                    className={classes.locField}
                   />
                 </FormControl>
               </Grid>

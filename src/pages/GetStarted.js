@@ -4,9 +4,6 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 
-// import BorderColorTwoToneIcon from "@material-ui/icons/BorderColorTwoTone";
-// import QueueIcon from "@material-ui/icons/Queue";
-
 const useStyles = makeStyles((theme) => ({
   formPaper: {
     display: "flex",
@@ -29,7 +26,6 @@ export default function GetStarted() {
   const classes = useStyles();
   return (
     <Grid container>
-      {/* Chart */}
       <Grid item xs={12} md={10} lg={10}>
         <Typography variant="h4" gutterBottom>
           Get Started
